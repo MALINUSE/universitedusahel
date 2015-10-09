@@ -74,6 +74,11 @@ nbproject
 
 # RubyMine
 .idea
+/public/uploads/**/*
+/public/system/**/*
+/doc/
+/public/assets/
+/public/javascripts/
 
 # E-texteditor
 .eprj
