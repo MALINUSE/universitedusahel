@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <%= render "/refinery/html_tag" %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
-  <head>
-    <%= render "/refinery/head" %>
-  </head>
-  <body id="<%= canonical_id @page %>">
-    <%= site_bar -%>
-    <div id="page_container">
-      <header id="header">
-        <%= render "/refinery/header" -%>
-      </header>
-      <section id="page">
-        <%= yield %>
-      </section>
-      <footer>
-        <%= render "/refinery/footer" -%>
-      </footer>
-    </div>
-    <%= render "/refinery/javascripts" %>
-  </body>
+<% site_bar = render('/refinery/site_bar', :head => true) -%>
+<!-- ******HEADER****** -->
+<%= render "/refinery/head" %>
+<!--//header-->
+<body class="home-page">
+<div class="wrapper">
+  <%= site_bar -%>
+  <%= render "/refinery/header" -%>
+</div>
+<!--//wrapper-->
+
+<!-- ******CONTENT****** -->
+<div class="content container">
+  <%= yield %>
+</div>
+<!--//content-->
+
+
+<!-- ******FOOTER****** -->
+<%= render "/refinery/footer" -%>
+<!--//footer-->
+
+
+<%= render "/refinery/javascripts" %>
+</body>
 </html>
