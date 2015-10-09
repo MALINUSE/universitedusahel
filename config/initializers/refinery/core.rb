@@ -29,6 +29,9 @@ Refinery::Core.configure do |config|
   # Site name
    config.site_name = "Université du Sahel"
 
+  # CSS class selectors for menu helper
+  config.menu_css = {:selected=>"active", :first=>"first", :last=>"last"}
+
   # This activates Google Analytics tracking within your website. If this
   # config is left blank or set to UA-xxxxxx-x then no remote calls to
   # Google Analytics are made.

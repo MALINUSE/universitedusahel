@@ -15,6 +15,7 @@ group :production, :staging do
 end
 
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'font-awesome-sass-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -68,3 +69,5 @@ gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 
 # The default authentication adapter
 gem 'refinerycms-authentication-devise', '~> 1.0'
+
+#gem 'refinerycms-menus', git: 'git://github.com/pylonweb/refinerycms-menus.git'
