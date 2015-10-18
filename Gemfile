@@ -11,11 +11,7 @@ end
 group :production, :staging do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'fog'
-  gem 'aws-sdk', '< 2.0'
 
-  #gem 'fog', '~>1.20', require: 'fog/aws/storage'
-  gem 'asset_sync'
 end
 
 gem 'bootstrap-sass', '~> 3.3.5'
@@ -76,7 +72,13 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 
 #gem 'refinerycms-menus', git: 'git://github.com/pylonweb/refinerycms-menus.git'
 
-#gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '~> 2'
+
+gem 'fog'
+#gem 'aws-sdk', '< 2.0'
+
+#gem 'fog', '~>1.20', require: 'fog/aws/storage'
+gem 'asset_sync'
 
 #gem 'fog', '~> 1.34.0'
 gem 'mini_magick'
