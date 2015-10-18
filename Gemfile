@@ -11,10 +11,10 @@ end
 group :production, :staging do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'fog'
+  #gem 'fog'
   gem 'aws-sdk', '< 2.0'
 
-  #gem 'fog', '~>1.20', require: 'fog/aws/storage'
+  gem 'fog', '~>1.20', require: 'fog/aws/storage'
   gem 'asset_sync'
 end
 
