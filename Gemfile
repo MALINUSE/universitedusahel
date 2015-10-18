@@ -72,11 +72,12 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 
 #gem 'refinerycms-menus', git: 'git://github.com/pylonweb/refinerycms-menus.git'
 
-gem 'aws-sdk', '~> 2'
+#gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '< 2.0'
+
 gem 'asset_sync', '~> 1.1.0'
 #gem 'fog', '~> 1.34.0'
+gem 'mini_magick'
 gem 'unicorn', '~> 4.9.0'
+gem 'rack-timeout'
 gem 'newrelic_rpm', '~> 3.13.2.302'
-
-gem 'refinerycms-i18n'
-gem 'paperclip', '~> 4.3', '>= 4.3.1'
