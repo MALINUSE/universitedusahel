@@ -1,19 +1,13 @@
 source 'https://rubygems.org'
-
 ruby '2.2.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
-# Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-end
+gem 'rails', '~> 4.2.4'
 
-group :production, :staging do
-  gem 'pg'
-  gem 'rails_12factor'
-  gem 'dragonfly-s3_data_store'
+# Use PostgreSQL as the database for Active Record
+gem 'pg'
 
-end
+gem 'therubyracer', '~> 0.12.1', :require => 'v8'
 
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-sass-rails'
@@ -28,6 +22,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -39,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
- gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -55,12 +51,35 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'quiet_assets'
+  gem 'letter_opener'
+  gem 'sextant'
+  gem 'guard', '>= 2.2.2',       :require => false
+  gem 'guard-livereload',        :require => false
+  gem 'rack-livereload'
+  gem 'rb-fsevent',              :require => false
+  gem 'figaro'
+end
+
+group :production do
+  # Heroku
+  gem 'dragonfly-s3_data_store'
+  gem 'rails_12factor'
+  gem 'rails_on_heroku'
+  gem 'heroku-deflater'
+  gem 'whenever', :require => false
+
+  # Caching strategy
+  gem 'actionpack-page_caching'
+  gem 'rack-cache'
+  gem 'kgio'
+  gem 'dalli'
+  gem 'memcachier'
 end
 
 
 gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
-
-gem 'quiet_assets', group: :development
 
 # Add support for searching inside Refinery's admin interface.
 gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
@@ -71,24 +90,4 @@ gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 # The default authentication adapter
 gem 'refinerycms-authentication-devise', '~> 1.0'
 
-#gem 'refinerycms-menus', git: 'git://github.com/pylonweb/refinerycms-menus.git'
-
-gem 'aws-sdk', '~> 2'
-
-gem 'fog'
-#gem 'aws-sdk', '< 2.0'
-
-#gem 'fog', '~>1.20', require: 'fog/aws/storage'
-#gem 'asset_sync'
-
-#gem 'fog', '~> 1.34.0'
-gem 'mini_magick'
-#gem 'unicorn', '~> 4.9.0'
-gem 'rack-timeout'
-gem 'newrelic_rpm', '~> 3.13.2.302'
-gem 'figaro', '~> 1.0.0'
-
-gem 'paperclip', '~> 4.2.0'
-
-gem 'globalize3'
-gem 'unf'
+gem 'refinerycms-blog', github: 'refinery/refinerycms-blog', branch: 'master'
