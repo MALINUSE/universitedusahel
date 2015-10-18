@@ -394,7 +394,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   figaro (~> 1.0.0)
-  fog (~> 1.20)
+  fog
   font-awesome-sass-rails
   jbuilder (~> 2.0)
   jquery-rails
