@@ -2,6 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   ## config.action_controller.asset_host = "http://assets.example.com"
+  #config.action_controller.asset_host = "//#{ENV['AWS_BUCKET']}.s3.amazonaws.com"
   config.action_controller.asset_host = "//#{ENV['AWS_BUCKET']}.s3.amazonaws.com"
 
 
@@ -24,7 +25,8 @@ Rails.application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = true
+  #config.serve_static_assets = true
+  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -85,4 +87,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  Refinery::Core.config.s3_backend = true
+
 end

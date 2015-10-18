@@ -11,6 +11,7 @@ end
 group :production, :staging do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'dragonfly-s3_data_store'
 
 end
 
@@ -38,7 +39,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+ gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -78,11 +79,16 @@ gem 'fog'
 #gem 'aws-sdk', '< 2.0'
 
 #gem 'fog', '~>1.20', require: 'fog/aws/storage'
-gem 'asset_sync'
+#gem 'asset_sync'
 
 #gem 'fog', '~> 1.34.0'
 gem 'mini_magick'
-gem 'unicorn', '~> 4.9.0'
+#gem 'unicorn', '~> 4.9.0'
 gem 'rack-timeout'
 gem 'newrelic_rpm', '~> 3.13.2.302'
 gem 'figaro', '~> 1.0.0'
+
+gem 'paperclip', '~> 4.2.0'
+
+gem 'globalize3'
+gem 'unf'
