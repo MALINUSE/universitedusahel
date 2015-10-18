@@ -11,7 +11,7 @@ end
 group :production, :staging do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'fog'
+  #gem 'fog'
 end
 
 gem 'bootstrap-sass', '~> 3.3.5'
@@ -75,7 +75,8 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 #gem 'aws-sdk', '~> 2'
 gem 'aws-sdk', '< 2.0'
 
-gem 'asset_sync', '~> 1.1.0'
+gem 'fog', '~>1.20', require: 'fog/aws/storage'
+gem 'asset_sync'
 #gem 'fog', '~> 1.34.0'
 gem 'mini_magick'
 gem 'unicorn', '~> 4.9.0'
