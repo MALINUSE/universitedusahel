@@ -77,3 +77,6 @@ gem 'asset_sync', '~> 1.1.0'
 #gem 'fog', '~> 1.34.0'
 gem 'unicorn', '~> 4.9.0'
 gem 'newrelic_rpm', '~> 3.13.2.302'
+
+gem 'refinerycms-i18n'
+gem 'paperclip', '~> 4.3', '>= 4.3.1'
