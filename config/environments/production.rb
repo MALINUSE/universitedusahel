@@ -3,7 +3,7 @@ Rails.application.configure do
 
   ## config.action_controller.asset_host = "http://assets.example.com"
   #config.action_controller.asset_host = "//#{ENV['AWS_BUCKET']}.s3.amazonaws.com"
-  config.action_controller.asset_host = "//#{ENV['AWS_BUCKET']}.s3.amazonaws.com"
+  config.action_controller.asset_host = "http://#{ENV['AWS_BUCKET']}.s3.amazonaws.com"
 
 
   # Code is not reloaded between requests.
@@ -88,6 +88,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  Refinery::Core.config.s3_backend = true
+  #Refinery::Core.config.s3_backend = true
 
 end
