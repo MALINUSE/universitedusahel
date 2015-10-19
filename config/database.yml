@@ -1,20 +1,26 @@
-development: 
+default: &default
   adapter: postgresql
   encoding: utf8
+  pool: 5
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
   database: usahel_dev
   username: imidsac
   password: MOImeme
-  pool: 5
-  timeout: 5000
+
 
 production:
-  adapter: postgresql
-  database: postgres
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: usahel_pro
+  username: imidsac
+  password: MOImeme
 
-test: 
-  adapter: postgresql
-  database: postgres
-  pool: 5
-  timeout: 5000
+
+test:
+  <<: *default
+  database: usahel_test
+  username: imidsac
+  password: MOImeme

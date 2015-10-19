@@ -8,11 +8,10 @@ Refinery::Core.configure do |config|
 
   # Set the S3 options using means other than securely by environment variables.
   # If you have to.
-  config.s3_backend = true
-  config.s3_access_key_id = ENV['AWS_ACCESS_KEY_ID']
-  config.s3_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
-  config.s3_bucket_name = ENV['AWS_BUCKET']
-  config.s3_region = 'us-west-2'
+  config.s3_bucket_name = ENV['S3_BUCKET']
+  config.s3_region = ENV['S3_REGION']
+  config.s3_access_key_id = ENV['S3_KEY']
+  config.s3_secret_access_key = ENV['S3_SECRET']
 
   # When true will use Amazon's Simple Storage Service instead of
   # the default file system for storing resources and images
@@ -28,22 +27,19 @@ Refinery::Core.configure do |config|
   # config.base_cache_key = :refinery
 
   # Site name
-   config.site_name = "Université du Sahel"
-
-  # CSS class selectors for menu helper
-  config.menu_css = {:selected=>"active", :first=>"first", :last=>"last"}
+  config.site_name = "Université du Sahel"
 
   # This activates Google Analytics tracking within your website. If this
   # config is left blank or set to UA-xxxxxx-x then no remote calls to
   # Google Analytics are made.
-  # config.google_analytics_page_code = "UA-xxxxxx-x"
+  config.google_analytics_page_code = ENV['GOOGLE_UA']
 
   # Enable/disable authenticity token on frontend
   # config.authenticity_token_on_frontend = false
 
   # Should set this if concerned about DOS attacks. See
   # http://markevans.github.com/dragonfly/file.Configuration.html#Configuration
-  # config.dragonfly_secret = "69a99c5eac67fd895c71c34939ae4642c558bb70423ebca7"
+  # config.dragonfly_secret = "db75016716ce6030ac8dc20239a4fd9f06433f3124997acf"
 
   # Register extra javascript for backend
   # config.register_javascript "prototype-rails"

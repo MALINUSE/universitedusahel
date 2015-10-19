@@ -90,4 +90,19 @@ gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 # The default authentication adapter
 gem 'refinerycms-authentication-devise', '~> 1.0'
 
-gem 'refinerycms-blog', github: 'refinery/refinerycms-blog', branch: 'master'
+# gem 'refinerycms-blog', github: 'refinery/refinerycms-blog', branch: 'master'
+#
+# gem 'seo_meta', git: 'https://github.com/parndt/seo_meta', branch: 'master'
+#
+# gem 'paper_trail', git: 'https://github.com/airblade/paper_trail', branch: 'master'
+#
+# gem 'refinerycms-settings', github: 'refinery/refinerycms-settings', branch: 'master'
+# gem 'refinerycms-page-images', github: 'refinery/refinerycms-page-images', branch: 'master'
+#
+# gem 'refinerycms-testing', git: 'https://github.com/refinery/refinerycms', branch: 'master'
+
+
+
+# gem 'globalize3'
+# gem 'unf'
+# gem 'asset_sync'
