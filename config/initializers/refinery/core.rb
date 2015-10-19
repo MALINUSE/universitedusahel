@@ -9,7 +9,7 @@ Refinery::Core.configure do |config|
   # Set the S3 options using means other than securely by environment variables.
   # If you have to.
   config.s3_bucket_name = ENV['AWS_BUCKET']
-  #config.s3_region = ENV['S_REGION']
+  #config.s3_region = ENV['S3_REGION']
   config.s3_access_key_id = ENV['AWS_ACCESS_KEY_ID']
   config.s3_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
 
