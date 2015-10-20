@@ -103,6 +103,8 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 # gem 'refinerycms-testing', git: 'https://github.com/refinery/refinerycms', branch: 'master'
 
 
+gem 'fog'
+gem 'unf'
 
 # gem 'globalize3'
 # gem 'unf'

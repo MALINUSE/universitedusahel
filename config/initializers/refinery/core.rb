@@ -8,7 +8,12 @@ Refinery::Core.configure do |config|
 
   # Set the S3 options using means other than securely by environment variables.
   # If you have to.
+  if Rails.env.production?
     config.s3_backend = true
+  else
+    config.s3_backend = false
+  end
+    #config.s3_backend = true
     config.s3_access_key_id = ENV['AWS_ACCESS_KEY_ID']
     config.s3_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
     config.s3_bucket_name = ENV['AWS_BUCKET']
