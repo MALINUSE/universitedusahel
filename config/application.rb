@@ -22,7 +22,7 @@ module Universitesahel
     # config.i18n.fallbacks = [:en]
     # config.i18n.available_locales = [:en, :fr, :ar]
 
-    config.assets.precompile += %w(application.js applicaion.css)
+    #config.assets.precompile += %w(application.js applicaion.css)
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.assets.precompile += %w( *.eot *.svg *.ttf *.woff *.woff2 )
