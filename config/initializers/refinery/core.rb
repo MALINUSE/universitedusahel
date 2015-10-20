@@ -14,6 +14,7 @@ Refinery::Core.configure do |config|
     config.s3_backend = false
   end
     #config.s3_backend = true
+    config.fog_provider = 'AWS'
     config.s3_access_key_id = ENV['AWS_ACCESS_KEY_ID']
     config.s3_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
     config.s3_bucket_name = ENV['AWS_BUCKET']
@@ -22,7 +23,7 @@ Refinery::Core.configure do |config|
 
   # When true will use Amazon's Simple Storage Service instead of
   # the default file system for storing resources and images
-  config.s3_backend = config.s3_access_key_id.present? || config.s3_secret_access_key.present?
+  #config.s3_backend = config.s3_access_key_id.present? || config.s3_secret_access_key.present?
 
   # Use a custom Dragonfly storage backend instead of the default
   # file system for storing resources and images
