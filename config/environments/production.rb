@@ -89,5 +89,4 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   Refinery::Core.config.s3_backend = true
-
 end
