@@ -22,6 +22,9 @@ module Universitesahel
     config.i18n.fallbacks = [:en]
     config.i18n.available_locales = [:en, :fr, :ar]
 
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.assets.precompile += %w( *.eot *.svg *.ttf *.woff *.woff2 )
+
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
