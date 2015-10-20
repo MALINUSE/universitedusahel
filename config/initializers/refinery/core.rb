@@ -21,7 +21,7 @@ Refinery::Core.configure do |config|
 
   # When true will use Amazon's Simple Storage Service instead of
   # the default file system for storing resources and images
-  #config.s3_backend = config.s3_access_key_id.present? || config.s3_secret_access_key.present?
+  config.s3_backend = config.s3_access_key_id.present? || config.s3_secret_access_key.present?
 
   # Use a custom Dragonfly storage backend instead of the default
   # file system for storing resources and images
