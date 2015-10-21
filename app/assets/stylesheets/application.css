@@ -13,7 +13,6 @@
  *= require_tree .
  *= require refinery/formatting
  *= require refinery/theme
- *= require mystyle
  *= require flexslider
  *= require_self
  */
