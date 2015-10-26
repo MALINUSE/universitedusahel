@@ -102,9 +102,10 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 #
 # gem 'refinerycms-testing', git: 'https://github.com/refinery/refinerycms', branch: 'master'
 
-
+gem 'paperclip'
+gem 'aws-sdk', '>= 2.0.0'
 gem 'fog'
-gem 'unf'
+#gem 'figaro'
 
 # gem 'globalize3'
 # gem 'unf'

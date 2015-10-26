@@ -89,6 +89,12 @@ GEM
       json
     awesome_nested_set (3.0.2)
       activerecord (>= 4.0.0, < 5)
+    aws-sdk (2.1.29)
+      aws-sdk-resources (= 2.1.29)
+    aws-sdk-core (2.1.29)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.1.29)
+      aws-sdk-core (= 2.1.29)
     babosa (1.0.2)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
@@ -99,6 +105,10 @@ GEM
     builder (3.2.2)
     byebug (6.0.2)
     chronic (0.10.2)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.7)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -268,6 +278,7 @@ GEM
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jmespath (1.1.3)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -295,6 +306,7 @@ GEM
     memcachier (0.0.2)
     method_source (0.8.2)
     mime-types (2.6.2)
+    mimemagic (0.3.0)
     mini_portile (0.6.2)
     minitest (5.8.1)
     multi_json (1.11.2)
@@ -308,6 +320,12 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     orm_adapter (0.5.0)
+    paperclip (4.3.1)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (= 0.3.0)
     pg (0.18.3)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -422,9 +440,6 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.1)
     unicorn (4.9.0)
       kgio (~> 2.6)
       rack
@@ -446,6 +461,7 @@ PLATFORMS
 
 DEPENDENCIES
   actionpack-page_caching
+  aws-sdk (>= 2.0.0)
   bootstrap-sass (~> 3.3.5)
   byebug
   coffee-rails (~> 4.1.0)
@@ -463,6 +479,7 @@ DEPENDENCIES
   kgio
   letter_opener
   memcachier
+  paperclip
   pg
   quiet_assets
   rack-cache
@@ -482,7 +499,6 @@ DEPENDENCIES
   therubyracer (~> 0.12.1)
   turbolinks
   uglifier (>= 1.3.0)
-  unf
   unicorn
   web-console (~> 2.0)
   whenever
