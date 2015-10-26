@@ -13,8 +13,8 @@ Refinery::Resources.configure do |config|
   # The s3_backend setting by default defers to the core setting for this but can be set just for resources.
   config.s3_backend = Refinery::Core.s3_backend
   config.s3_bucket_name = ENV['S3_BUCKET']
-  config.s3_access_key_id = ENV['S3_KEY']
-  config.s3_secret_access_key = ENV['S3_SECRET']
+  config.s3_access_key_id = ENV['S3_ACCESS_KEY']
+  config.s3_secret_access_key = ENV['S3_SECRET_KEY']
   config.s3_region = ENV['S3_REGION']
 
   # Configure Dragonfly
