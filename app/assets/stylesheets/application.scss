@@ -13,6 +13,23 @@
  *= require_tree .
  *= require refinery/formatting
  *= require refinery/theme
- *= require flexslider
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "styles";
+@import "plugins/flexslider/flexslider";
+@import "plugins/pretty-photo/css/prettyPhoto";
+@import "plugins/font-awesome/css/font-awesome";
+
+#Body {
+  background-color: white;
+
+}
+#body {
+  background-color: white;
+
+}
+
