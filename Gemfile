@@ -110,3 +110,7 @@ gem 'fog'
  #gem 'globalize3'
  gem 'unf'
  gem 'asset_sync'
+
+gem 'refinerycms-news', github: 'refinery/refinerycms-news', branch: 'master'
+#gem 'refinerycms-events', '= 0.1', :require => 'events', :git => 'git://github.com/Vizzuality/refinerycms-events.git'
+#gem "refinerycms-settings", git: "https://github.com/refinery/refinerycms-settings", branch: "master"

@@ -13,4 +13,17 @@ module ApplicationHelper
     menu_presenter.max_depth = 0
     menu_presenter.to_html
   end
+
+  def lang_switch_url(l)
+    Globalize.with_locale(l) do
+      if @page
+        url = refinery.url_for(@page.url)
+      else
+        url = root_path
+      end
+
+      return link_to Refinery::I18n.config.locales[l], url, hreflang: l
+    end
+  end
+
 end

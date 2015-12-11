@@ -23,9 +23,13 @@
     </h1><!--//logo-->
     <div class="info col-md-8 col-sm-8">
       <ul class="menu-top navbar-right hidden-xs">
-        <% ::Refinery::I18n.frontend_locales.each do |locale| %>
-            <li><%= link_to_if Globalize.locale.to_s != locale.to_s, locale, {:locale => locale} %></li>
-        <% end %>
+        <div id="translations-menu">
+          <% Refinery::I18n.config.frontend_locales.each do |l| %>
+              <% unless I18n.locale == l %>
+                  <%= lang_switch_url l %>
+              <% end %>
+          <% end %>
+        </div>
       </ul><!--//menu-top-->
       <br />
       <div class="contact pull-right">

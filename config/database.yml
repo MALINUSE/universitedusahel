@@ -9,18 +9,18 @@ development:
   <<: *default
   database: usahel_dev
   username: imidsac
-  password: MOImeme
+  password: <%= ENV['PASSWORD'] %>
 
 
 production:
   <<: *default
   database: usahel_pro
   username: imidsac
-  password: MOImeme
+  password: <%= ENV['PASSWORD'] %>
 
 
 test:
   <<: *default
   database: usahel_test
   username: imidsac
-  password: MOImeme
+  password: <%= ENV['PASSWORD'] %>
